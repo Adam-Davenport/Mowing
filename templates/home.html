@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+  {% block body_block %}
+    <h1 class="text-center">Home</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <form action="/" method='POST'> {% csrf_token %}
+          <input type="hidden" name="location" value="Home">
+          <input type="hidden" name="direction" value="North/South">
+          <input type="submit" class="btn btn-primary form-control submit" value="North/South">
+        </form>
+        </div>
+      <div class="col-sm-6">
+        <form action="/" method='POST'> {% csrf_token %}
+          <input type="hidden" name="location" value="Home">
+          <input type="hidden" name="direction" value="East/West">
+          <input type="submit" class="btn btn-primary form-control submit" value="East/West">
+        </form>
+      </div>
+    </div>
+  {% endblock %}
