@@ -1,14 +1,17 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from record.models import Mowing
 
 def index(request):
     if request.method == 'POST':
         post_record(request)
-    records = Mowing.objects.order_by('date').reverse()
-    context = {
-        'records': records
-    }
-    return render(request, 'index.html', context)
+        return HttpResponseRedirect('/')
+    else:
+        records = Mowing.objects.order_by('date').reverse()
+        context = {
+            'records': records
+        }
+        return render(request, 'index.html', context)
 
 def post_record(request):
     print(request.POST)
