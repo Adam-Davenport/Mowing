@@ -28,8 +28,9 @@ SECRET_KEY = '-%mlj(=a(pskk!l5%d85_o@ug=ang*@@z%8)-i&f6f7dgkpzah'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'localhost',
-    'galacticweapons.com'
+    'galacticweapons.com',
 ]
 
 
