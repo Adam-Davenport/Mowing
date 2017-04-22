@@ -28,7 +28,7 @@ SECRET_KEY = '-%mlj(=a(pskk!l5%d85_o@ug=ang*@@z%8)-i&f6f7dgkpzah'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    galacticweapons.com
+    'galacticweapons.com',
 ]
 
 
