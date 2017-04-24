@@ -23,7 +23,7 @@
       <tr>
         <td>{{ record.location }}</td>
         <td>{{ record.direction }}</td>
-        <td>{{ record.date }}</td>
+        <td>{{ record.date|date:'l, M/d' }}</td>
       </tr>
     {% endfor %}
   </table>
