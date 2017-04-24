@@ -1,3 +1,4 @@
 from django.contrib import admin
+from record.models import Mowing
 
-# Register your models here.
+admin.register(Mowing)
