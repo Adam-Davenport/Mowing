@@ -4,17 +4,19 @@
     <h1 class="text-center">Home</h1>
     <div class="row">
       <div class="col-sm-6">
-        <form action="/" method='POST'> {% csrf_token %}
+        <form action="/" method='POST' class="submit-form">
+          {% csrf_token %}
           <input type="hidden" name="location" value="Farm">
           <input type="hidden" name="direction" value="North/South">
-          <input type="submit" class="btn btn-primary form-control submit" value="North/South">
+          <input type="submit" class="btn btn-primary btn-lg submit">
         </form>
         </div>
       <div class="col-sm-6">
-        <form action="/" method='POST'> {% csrf_token %}
-          <input type="hidden" name="location" value="Home">
+        <form action="/" method='POST' class="submit-form">
+          {% csrf_token %}
+          <input type="hidden" name="location" value="Farm">
           <input type="hidden" name="direction" value="East/West">
-          <input type="submit" class="btn btn-primary form-control submit" value="East/West">
+          <input type="submit" class="btn btn-primary btn-lg submit">
         </form>
       </div>
     </div>
