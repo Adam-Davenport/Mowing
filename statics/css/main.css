@@ -1,4 +1,20 @@
-.submit{
+.submit, .post-link{
+  /*height: 250px;*/
+  /*font-size: 5.0em;*/
+  height: 100%;
+  width: 100%;
+}
+
+.submit-form{
+  padding: 5%;
   height: 250px;
-  font-size: 5.0em;
+}
+
+.location-bar{
+  padding: 5%;
+  height: 150px;
+}
+
+html, body, h1{
+  font-size: 1.5em;
 }
