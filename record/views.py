@@ -27,4 +27,4 @@ def farm(request):
     return render(request, 'farm.html')
 
 def trails(request):
-    return render(request, 'farm.html')
+    return render(request, 'trails.html')
