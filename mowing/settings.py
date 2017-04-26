@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import io
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +23,15 @@ STATIC_DIR = os.path.join(BASE_DIR, 'mowing/static')
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-%mlj(=a(pskk!l5%d85_o@ug=ang*@@z%8)-i&f6f7dgkpzah'
+
+KEY_PATH = os.path.join(BASE_DIR, 'mowing/canada.txt')
+try:
+    key_file = open(KEY_PATH, 'r')
+    SECRET_KEY = key_file.readline()
+    key_file.close()
+except IOError:
+    SECRET_KEY = '-%mlj(=a(pskk!l5%d85_o@ug=ang*@@z%8)-i&f6f7dgkpzah'
+    print('Error finding key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
