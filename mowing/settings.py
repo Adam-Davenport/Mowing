@@ -33,8 +33,9 @@ except IOError:
     SECRET_KEY = '-%mlj(=a(pskk!l5%d85_o@ug=ang*@@z%8)-i&f6f7dgkpzah'
     print('Error finding key')
 
+print(SECRET_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
