@@ -14,7 +14,6 @@ def index(request):
         return render(request, 'index.html', context)
 
 def post_record(request):
-    print(request.POST)
     location = request.POST['location']
     direction = request.POST['direction']
     session = Mowing.objects.create(location=location, direction=direction)
